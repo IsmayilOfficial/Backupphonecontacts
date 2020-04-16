@@ -37,6 +37,35 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:250383774361:android:5cb066429d7c0fab997e08",
+        "android_client_info": {
+          "package_name": "com.example.backupdata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250383774361-c1s0mt8pvgjc2cjg3q07vbklcrt0j7og.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0NmrQJNxcHwcy117U9yp6-YmFw2ITRtg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250383774361-c1s0mt8pvgjc2cjg3q07vbklcrt0j7og.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:250383774361:android:3bc2c9f6f69989f8997e08",
         "android_client_info": {
           "package_name": "com.example.chmarax.logregform"

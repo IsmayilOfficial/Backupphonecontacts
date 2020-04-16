@@ -7,7 +7,7 @@
               android:paddingLeft="@dimen/activity_horizontal_margin"
               android:paddingRight="@dimen/activity_horizontal_margin"
               android:paddingTop="@dimen/activity_vertical_margin"
-              tools:context="com.droid.backupphone.activity.login.LoginActivity">
+              tools:context=".activity.login.LoginActivity">
 
     <!-- Login progress -->
     <include
@@ -23,7 +23,7 @@
             style="@style/MatchParentWrapContent"
             android:orientation="vertical">
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 style="@style/MatchParentWrapContent">
 
                 <AutoCompleteTextView
@@ -34,9 +34,9 @@
                     android:maxLines="1"
                     android:singleLine="true"/>
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 style="@style/MatchParentWrapContent">
 
                 <EditText
@@ -49,9 +49,10 @@
                     android:inputType="textPassword"
                     android:maxLength="@integer/password_max_length"
                     android:maxLines="1"
-                    android:singleLine="true"/>
+                    android:singleLine="true"
+                    tools:ignore="InvalidImeActionId" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/btn_email_sign_in"
