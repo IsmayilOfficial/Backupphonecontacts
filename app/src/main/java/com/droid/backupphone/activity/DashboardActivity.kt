@@ -17,15 +17,12 @@ import com.droid.backupphone.R
 import com.droid.backupphone.activity.DashboardActivity
 import com.droid.backupphone.activity.Setting.SettingActivity
 import com.droid.backupphone.activity.contact.ContactSyncActivity
-import com.droid.backupphone.activity.sms.SmsSyncActivity
 import com.droid.backupphone.common.CommonConstants
 import com.droid.backupphone.util.CommonUtils
 import com.droid.backupphone.util.PreferenceUtils
 
 
-/**
- * Dashboard activity to show all possible type of backup options.
- */
+
 class DashboardActivity : BaseActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +32,7 @@ class DashboardActivity : BaseActivity(), View.OnClickListener {
         val tvUser = findViewById(R.id.tv_user) as TextView
         tvUser.text = PreferenceUtils.getUserEmail(applicationContext)
         findViewById(R.id.cv_contact).setOnClickListener(this)
-        findViewById(R.id.cv_sms).setOnClickListener(this)
+
         findViewById(R.id.cv_photos).setOnClickListener(this)
         findViewById(R.id.cv_setting).setOnClickListener(this)
     }
@@ -77,9 +74,7 @@ class DashboardActivity : BaseActivity(), View.OnClickListener {
             R.id.cv_contact -> if (mayRequestContacts()) {
                 openContactSyncScreen()
             }
-            R.id.cv_sms -> if (mayRequestSms()) {
-                openSmsSyncScreen()
-            }
+
             R.id.cv_photos -> Toast.makeText(this, "Feature Coming soon...", Toast.LENGTH_SHORT).show()
             R.id.cv_setting -> {
                 val contactIntent = Intent(this@DashboardActivity, SettingActivity::class.java)
@@ -94,11 +89,7 @@ class DashboardActivity : BaseActivity(), View.OnClickListener {
         startActivity(contactIntent)
     }
 
-    // Open sms sync screen
-    private fun openSmsSyncScreen() {
-        val contactIntent = Intent(this@DashboardActivity, SmsSyncActivity::class.java)
-        startActivity(contactIntent)
-    }
+
 
     // check for contact permission
     private fun mayRequestContacts(): Boolean {

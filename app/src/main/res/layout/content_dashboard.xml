@@ -64,29 +64,6 @@
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/cv_sms"
-            style="@style/AppTheme.Card.Margins"
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="5dip"
-            android:layout_weight=".5">
-
-            <RelativeLayout
-                style="@style/MatchParentWrapContent"
-                android:padding="10dip">
-
-                <TextView
-                    android:id="@+id/tv_sms"
-                    style="@style/DashboardText"
-                    android:text="@string/sms"/>
-
-                <ImageView
-                    style="@style/DashboardImage"
-                    android:layout_above="@id/tv_sms"
-                    android:src="@drawable/sms_icon"/>
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
     </LinearLayout>
 
     <LinearLayout

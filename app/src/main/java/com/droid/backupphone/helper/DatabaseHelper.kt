@@ -4,7 +4,7 @@ import android.content.ContentProviderOperation
 import android.provider.ContactsContract
 
 import com.droid.backupphone.model.contact.Contact
-import com.droid.backupphone.model.sms.Sms
+
 import com.droid.backupphone.util.CommonUtils
 import com.google.firebase.database.DatabaseReference
 
@@ -17,9 +17,7 @@ object DatabaseHelper {
     }
 
 
-    fun updateSms(userEndPoint: DatabaseReference?, sms: Sms?) {
-        userEndPoint?.child(sms?.getAddress())?.setValue(sms)
-    }
+
 
 
     fun deleteContact(userEndPoint: DatabaseReference?, contact: Contact?) {
@@ -27,9 +25,7 @@ object DatabaseHelper {
     }
 
 
-    fun deleteSms(userEndPoint: DatabaseReference?, sms: Sms?) {
-        userEndPoint?.child(sms?.getAddress())?.removeValue()
-    }
+
 
 
     fun writeNewContact(userEndPoint: DatabaseReference?, contacts: MutableList<Contact?>?) {
@@ -38,11 +34,7 @@ object DatabaseHelper {
         }
     }
 
-    fun writeNewSms(userEndPoint: DatabaseReference?, contacts: MutableList<Sms?>?) {
-        for (contact in contacts!!) {
-            userEndPoint?.child(contact?.getAddress())?.setValue(contact)
-        }
-    }
+
 
     fun getUserContactEndPoint(userId: String?): DatabaseReference? {
         return CommonUtils.getContactEndPoint()?.child("user$userId")

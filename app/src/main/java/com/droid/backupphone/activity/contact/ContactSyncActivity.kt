@@ -23,12 +23,12 @@ class ContactSyncActivity : BaseActivity(), View.OnClickListener {
         val toolbar = findViewById(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
         findViewById(R.id.btn_phone_contact).setOnClickListener(this)
-        findViewById(R.id.btn_cloud_contact).setOnClickListener(this)
+
     }
 
     override fun onClick(view: View?) {
         when (view?.getId()) {
-            R.id.btn_phone_contact, R.id.btn_cloud_contact -> {
+            R.id.btn_phone_contact -> {
                 mClickedButtonId = view!!.getId()
                 if (mayRequestContacts()) {
                     openNextScreen()
@@ -68,11 +68,7 @@ class ContactSyncActivity : BaseActivity(), View.OnClickListener {
                 startActivity(phoneContactIntent)
                 mClickedButtonId = -1
             }
-            R.id.btn_cloud_contact -> {
-                val cloudContactIntent = Intent(this@ContactSyncActivity, CloudContactActivity::class.java)
-                startActivity(cloudContactIntent)
-                mClickedButtonId = -1
-            }
+
             else -> {
             }
         }

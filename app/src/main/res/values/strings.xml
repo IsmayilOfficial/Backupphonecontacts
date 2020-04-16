@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Smart Backup</string>
+    <string name="app_name">Backup data</string>
     <string name="action_logout">Logout</string>
     <string name="action_settings">Settings</string>
     <string name="action_select_all">Select all</string>
