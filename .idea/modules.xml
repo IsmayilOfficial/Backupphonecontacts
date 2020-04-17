@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/BackupData.iml" filepath="$PROJECT_DIR$/BackupData.iml" group="BackupData" />
       <module fileurl="file://$PROJECT_DIR$/Backupphonecontacts.iml" filepath="$PROJECT_DIR$/Backupphonecontacts.iml" group="Backupphonecontacts" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Backupphonecontacts/app" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="BackupData/app" />
     </modules>
   </component>
 </project>
